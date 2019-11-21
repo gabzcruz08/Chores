@@ -11,7 +11,7 @@
     "babel-preset-expo": "4.0.0",
     "babel-preset-react-native": "1.9.1",
     "babel-preset-stage-2": "^6.24.1",
-    "eslint": "3.19.0",
+    "eslint": "4.18.2",
     "eslint-plugin-react": "6.10.3",
     "eslint-plugin-react-native": "2.3.2",
     "expo-cli": "^2.14.0",
