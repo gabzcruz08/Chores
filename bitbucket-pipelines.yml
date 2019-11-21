@@ -1,0 +1,28 @@
+image: tarampampam/node:latest
+definitions:
+  caches:
+    npm: ~/.npm
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy Production
+          deployment: production
+          caches:
+            - npm
+          script:
+            - npm ci
+            - VERSION=$(npm run version --silent)
+            - npx expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+            - npx expo publish --release-channel prod-v-$VERSION --non-interactive
+    staging:
+      - step:
+          name: Deploy Staging
+          deployment: staging
+          caches:
+            - npm
+          script:
+            - npm ci
+            - VERSION=$(npm run version --silent)
+            - npx expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+            - npx expo publish --release-channel staging-v-$VERSION --non-interactive

@@ -1,0 +1,19 @@
+{
+  "en": {
+    "start":{
+      "skip": "Skip",
+      "login_facebook": "LOGIN WITH FACEBOOK",
+      "access_live": "ACCESS MY LIVE",
+      "create_account": "CREATE YOUR ACCOUNT"
+    },
+  },
+  "pt": {
+    "start":{
+      "skip": "Entrar",
+      "login_facebook": "LOGIN COM FACEBOOK",
+      "access_live": "ACESSAR MEU LIVE",
+      "create_account": "CRIAR MINHA CONTA"
+    },
+  }
+
+}

@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "chores",
+    "slug": "chores",
+    "sdkVersion": "30.0.0",
+    "privacy": "unlisted",
+    "version": "1.1.0",
+    "facebookScheme": "fb531680650642358",
+    "facebookAppId": "531680650642358",
+    "facebookDisplayName": "Chores",
+    "icon": "./assets/images/icon.png",
+    "notification": {
+      "icon": "./assets/images/notification_icon.png",
+      "color": "#FF9E01"
+    },
+    "android": {
+      "versionCode": 8,
+      "package": "ae.chores.app",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCCszXsWNXiImeEwr8ht9Kb4gHHH6MxoS8"
+        }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_INTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "splash": {
+      "image": "./assets/images/splash/workingSplash.png",
+      "resizeMode": "cover"
+    },
+    "ios": {
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "bundleIdentifier": "ae.chores.app",
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "Please allow your location, it will be useful for capturing address using google map while booking.",
+        "NSLocationWhenInUseUsageDescription": "Please allow your location, it will be useful for capturing address using google map while booking.",
+        "NSCameraUsageDescription": "Please allow your camera, it will be useful for uploading images of work required for your booking.",
+        "NSPhotoLibraryUsageDescription": "Please allow your gallery it will be useful saving images of work required for your booking."
+      },
+      "config": {
+        "usesNonExemptEncryption": false,
+        "googleMapsApiKey": "AIzaSyCCszXsWNXiImeEwr8ht9Kb4gHHH6MxoS8"
+      }
+    },
+    "description": "",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
