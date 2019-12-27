@@ -7,10 +7,12 @@ import reducers from "./src/Reducers";
 import Router from "./src/Router";
 import getTheme from "./native-base-theme/components";
 import material from "./native-base-theme/variables/material";
-import { Asset, AppLoading, Font } from "expo";
+import * as Asset from 'expo-asset';
+import { AppLoading } from 'expo';
+import Font from 'expo-font';
 import Loading from "./src/components/Loading";
 //import Sentry from 'sentry-expo'
-import Expo from "expo";
+import Expo from 'expo';
 import Start from "./src/components/Start";
 // import Register from './src/components/Register';
 // import Home from './src/components/Home'

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Linking,AsyncStorage, Text, View, Image, Platform, TouchableOpacity, ScrollView, Dimensions } from 'react-native'
 import styles from './styles'
 import { Spinner } from 'native-base'
-import { Font, Notifications, Permissions } from 'expo';
+import * as Font from 'expo-font';
+import { Notifications } from 'expo';
+import * as Permissions from 'expo-permissions';
 import { getDashboardServices, getStateList, setLogoutState } from './actions'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'

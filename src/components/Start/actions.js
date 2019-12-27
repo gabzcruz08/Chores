@@ -2,8 +2,9 @@ import { API_URL } from '../../Config'
 import callbackError from '../../Util'
 import axios from 'axios'
 import { Platform } from 'react-native';
-import { Permissions, Notifications, Expo, } from 'expo';
-
+import Expo from 'expo';
+import { Notifications } from 'expo';
+import * as Permissions from 'expo-permissions';
 
 export const verifyUserLogin = (email, password, deviceType, deviceToken, cbSuccess, cbError) => {
     const url = API_URL + '/v1/auth/login';

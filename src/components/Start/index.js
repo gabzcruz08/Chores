@@ -5,8 +5,11 @@ import { TextInput, View, Image, AsyncStorage, TouchableOpacity, Alert, Platform
 import { Root, Text, Button, Item, Input, Label, Spinner } from 'native-base'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Expo from 'expo';
-import { Font, Asset, AppLoading, Permissions, Notifications } from 'expo';
+import Expo, { AppLoading, Notifications } from 'expo';
+import { Asset } from 'expo-asset';
+import * as Font from 'expo-font';
+import * as Permissions from 'expo-permissions';
+
 import styles from './styles'
 import { verifyUserLogin, setUserLogin, verifyFacebookLogin, forgotPassword, register, resendVerificationLink } from './actions'
 import Icon from 'react-native-vector-icons/Ionicons';

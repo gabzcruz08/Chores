@@ -16,7 +16,7 @@ import { paymentPaypal, CreateBooking } from "./action";
 import i18n from "react-native-i18n";
 import axios from "axios";
 import { Platform } from "react-native";
-import { Constants } from "expo";
+import Constants from 'expo-constants';
 window.DOMParser = require("xmldom").DOMParser;
 
 export class CustomReviewRequestFooterTab extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from './styles'
 import { View, Text, Image, FlatList, ImageBackground, TouchableOpacity, ScrollView, AsyncStorage } from 'react-native'
-import { Font } from 'expo'
+import * as Font from 'expo-font'
 import { CustomeFooterTab } from '../../partial/footer'
 import RF from 'react-native-responsive-fontsize';
 class Schedules extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Font } from 'expo';
+import * as Font from 'expo-font';
 import { View, Text, ListView, Image, TextInput, ScrollView, AsyncStorage, TouchableOpacity } from 'react-native'
 import styles from './styles'
 import { BackHandler } from "react-native";

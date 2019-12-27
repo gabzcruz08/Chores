@@ -15,7 +15,10 @@ import {
 import { Button, Textarea, Item, Spinner } from "native-base";
 import Modal from "react-native-modalbox";
 import styles from "./styles";
-import { Font, ImagePicker, Camera, Permissions } from "expo";
+import { Camera } from 'expo-camera';
+import * as Font from "expo-font";
+import * as ImagePicker from "expo-image-picker";
+import * as Permissions from "expo-permissions";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Col, Row, Grid } from "react-native-easy-grid";

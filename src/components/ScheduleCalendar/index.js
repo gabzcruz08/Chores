@@ -6,7 +6,7 @@ import { BackHandler } from "react-native";
 import { Grid, Col, Row } from 'react-native-easy-grid'
 // import BigCalendar from 'react-big-calendar'
 // import BigCalendar from 'react-big-calendar'
-import { Font } from 'expo';
+import * as Font from 'expo-font';
 import moment from 'moment'
 import { CustomeFooterTab } from '../../partial/footer'
 import Icons from 'react-native-vector-icons/FontAwesome';
