@@ -9,17 +9,18 @@ import getTheme from "./native-base-theme/components";
 import material from "./native-base-theme/variables/material";
 import * as Asset from 'expo-asset';
 import { AppLoading } from 'expo';
-import Font from 'expo-font';
+import * as Font from 'expo-font';
 import Loading from "./src/components/Loading";
 //import Sentry from 'sentry-expo'
-import Expo from 'expo';
+import * as Expo from 'expo';
+import * as Amplitude from 'expo-analytics-amplitude'
 import Start from "./src/components/Start";
 // import Register from './src/components/Register';
 // import Home from './src/components/Home'
 import { I18nextProvider } from "react-i18next";
 import i18n from "./src/I18n";
 import { Root } from "native-base";
-import { AsyncStorage } from "react-native";
+import { AsyncStorage } from 'react-native'
 // import ForgotPassword from './src/components/ForgotPassword';
 // import Reference from './src/components/Reference';
 import i18ns from "react-native-i18n";
@@ -335,12 +336,16 @@ class App extends Component {
     );
   }
 
-  componentWillMount() {
-    Expo.ScreenOrientation.allow(Expo.ScreenOrientation.Orientation.PORTRAIT);
-    Expo.Amplitude.initialize("fba2640d268c3214141315cb738f18e0");
-    this._cacheResourcesAsync();
-    i18ns.locale = "en";
-    this.setPushNotificationConfigurations();
+  async componentWillMount() {
+    try {
+      await Expo.ScreenOrientation.allowAsync(Expo.ScreenOrientation.Orientation.PORTRAIT);
+      Amplitude.initialize("fba2640d268c3214141315cb738f18e0");
+      this._cacheResourcesAsync();
+      i18ns.locale = "en";
+      this.setPushNotificationConfigurations();    
+    } catch (e) {
+      console.error(e)
+    }
   }
   setPushNotificationConfigurations() {
     Expo.Notifications.createChannelAndroidAsync("chores-notification", {
