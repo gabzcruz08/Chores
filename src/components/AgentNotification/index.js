@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BackHandler } from "react-native";
-import { View, Text, ListView, Image, TextInput, FlatList, ScrollView, TouchableOpacity, AsyncStorage, } from 'react-native'
+import { View, Text, Image, TextInput, FlatList, ScrollView, TouchableOpacity, AsyncStorage, } from 'react-native'
 import styles from './styles'
 import { AgentFooterTab } from '../../partial/agentFooter'
 import { bindActionCreators } from 'redux';

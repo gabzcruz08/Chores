@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as Font from 'expo-font';
-import { View, Text, ListView, Image, TextInput, ScrollView, AsyncStorage, TouchableOpacity } from 'react-native'
+import { View, Text, ListView, FlatList, Image, TextInput, ScrollView, AsyncStorage, TouchableOpacity } from 'react-native'
 import styles from './styles'
 import { BackHandler } from "react-native";
 import RF from 'react-native-responsive-fontsize';
@@ -39,6 +39,7 @@ class Search extends Component {
             arrayHolder: [],
             thisLanguageCode: '',
         };
+
         this.navigateTocategory = this.navigateTocategory.bind(this);
         this.onBackPress = this.onBackPress.bind(this);
     }

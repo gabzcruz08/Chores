@@ -2,7 +2,7 @@ import { API_URL } from '../../Config'
 import callbackError from '../../Util'
 import axios from 'axios'
 import { Platform } from 'react-native';
-import Expo from 'expo';
+import * as Expo from 'expo';
 import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
 
