@@ -97,11 +97,15 @@ function _logout() {
     { cancelable: true }
   );
 }
-
 const loginUserFullName = "";
-AsyncStorage.multiGet(["userFirstName", "userLastName"]).then(data => {
-  loginUserFullName = data[0][1] + " " + data[1][1];
-});
+
+try {
+  AsyncStorage.multiGet(["userFirstName", "userLastName"]).then(data => {
+    loginUserFullName = data[0][1] + " " + data[1][1];
+  });
+} catch (e) {
+  console.error(e)
+}
 
 //console.log(this);
 

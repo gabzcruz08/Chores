@@ -10,7 +10,10 @@ import { Button, Item, Input, Label, Container, Content } from 'native-base';
 import moment from 'moment'
 import { BackHandler } from "react-native";
 import RF from 'react-native-responsive-fontsize';
-import { Permissions, MapView, Location } from 'expo';
+import * as Location from 'expo-location';
+import { MapView } from 'expo';
+import * as Permissions from 'expo-permissions';
+
 import { GetFavouriteBannerOnService, getDefaultAddresses, insertAddress, updateAddress, setLogoutState, getAddressFromGeoCode } from './action';
 import { Ionicons } from '@expo/vector-icons';
 import i18n from 'react-native-i18n';
