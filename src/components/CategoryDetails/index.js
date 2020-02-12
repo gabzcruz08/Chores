@@ -124,6 +124,7 @@ class CategoriesDetails extends Component {
       markFavourite: false,
       servicePreferenceSelectionFlag: false,
       selectedCompanyName: "",
+      selectedCompanyAddress: "",
 
       //#region Height data
       mainScrollHeight: 0,
@@ -221,7 +222,7 @@ class CategoriesDetails extends Component {
   }
 
   companyDataSet(selectedCompany, companyDrp) {
-    //console.log("Selected company data ", selectedCompany);
+    console.log("Selected company data ", selectedCompany);
     if (selectedCompany) {
       let data = this.state.companyData;
       data.SelectedCompany = selectedCompany;
@@ -1104,9 +1105,112 @@ class CategoriesDetails extends Component {
                 marginRight: "auto"
               }}
             >
-              <Grid>
-                <Row size={0.2} />
-                <Row size={1}>
+            {/* <Row size={7}> */}
+            {/* <ScrollView ref={"scrollView2"} style={styles.hundredHeightWidth}> */}
+            {/* <Grid
+              style={[styles.hundredHeightWidth, { height: RF(25.5) }]}
+              onLayout={event => {
+                if (!this.state.favouriteBannerSectionHeight) {
+                  var { x, y, width, height } = event.nativeEvent.layout;
+                  this.setState({ favouriteBannerSectionHeight: height });
+                }
+              }}
+            > */}
+              <Col size={1} />
+              <Col size={12}>
+                <Grid>
+                <Row size={15}>
+                      <Grid>
+                      <Col size={1} />
+                        <Col size={10}>
+                        <Grid>
+                            <Row size={0.1} />
+                            <Row size={15}>
+                            <Grid>
+                                <Col size={2} />
+                                <Col size={10}>
+                                  <View style={styles.allHeightWidth}>
+                                    <Grid>
+                                      {this.state.customerCareNumber && (
+                                        <Row size={12}>
+                                          <TouchableOpacity
+                                            onPress={() => {
+                                              Linking.openURL(
+                                                `tel:${this.state.customerCareNumber}`
+                                              );
+                                            }}
+                                            onLayout={event => {
+                                              var {
+                                                x,
+                                                y,
+                                                width,
+                                                height
+                                              } = event.nativeEvent.layout;
+
+                                              this.setState({
+                                                buttonHeight: height
+                                              });
+                                            }}
+                                            style={[
+                                              styles.axactCenter,
+                                              styles.allHeightWidth,
+                                              styles.backgroundColorRed,
+                                              {
+                                                borderRadius: this.state
+                                                  .buttonHeight
+                                              }
+                                            ]}
+                                          >
+                                            <Text style={styles.txtCallUsNow}>
+                                              {i18n.t("call")}{" "}
+                                            </Text>
+                                            <Text style={styles.txtCallUsNow}>
+                                              {this.state.customerCareNumber}
+                                            </Text>
+                                          </TouchableOpacity>
+                                        </Row>
+                                      )}
+                                      <Row size={2} />
+                                      <Row size={12}>
+                                        <Button
+                                          onPress={() => {
+                                            //console.log("clicked");
+                                            this.props.navigation.navigate(
+                                              "provider",
+                                              { from: "categoriesDetailsNew" }
+                                            );
+                                          }}
+                                          rounded
+                                          style={[
+                                            styles.axactCenter,
+                                            styles.allHeightWidth,
+                                            styles.backgroundColorGreen
+                                          ]}
+                                          >
+                                          <Text style={styles.txtCallUsNow}>
+                                            {i18n.t("book")}
+                                          </Text>
+                                        </Button>
+                                      </Row>
+                                      {!this.state.customerCareNumber && (
+                                        <Row size={10} />
+                                      )}
+                                    </Grid>
+                                  </View>
+                                  </Col>
+                                  <Col size={2} />
+                                  </Grid>
+                                  </Row>
+                                  <Row size={0.1} />
+                                </Grid>
+                              </Col>
+                            <Col size={1} />
+                          </Grid>
+                        </Row>
+                      {/* <Grid> */}
+                  {/* </Grid> */}
+                <Row size={0.1} />
+                <Row size={4}>
                   {/* <View style={[styles.hundredHeightWidth]}> */}
                   {/* <Item error={this.state.descriptionErr}> */}
                   <Textarea
@@ -1131,9 +1235,9 @@ class CategoriesDetails extends Component {
                   {/* </Item> */}
                   {/* </View> */}
                 </Row>
-                <Row size={0.2} />
+                <Row size={7} />
                 {this.state.uploadedImage != "" ? (
-                  <Row size={1}>
+                  <Row size={2}>
                     <View style={[styles.hundredHeightWidth]}>
                       {this.state.uploadedImage}
                     </View>
@@ -1157,19 +1261,26 @@ class CategoriesDetails extends Component {
                     </Button>
                   </View>
                 </Row>
-              </Grid>
-            </View>
+
+            </Grid>
+                </Col>
+            <Col size={1} />
+        {/* </Grid> */}
+        {/* </ScrollView> */}
+        {/* </Row> */}
+        <Row size={3}/>
           </View>
+        </View>
         ) : null}
-        <View
+        {/* <View
           style={{
             height: RF(10),
             alignItems: "center",
             flexDirection: "row",
             justifyContent: "center"
           }}
-        >
-          <TouchableOpacity
+        > */}
+          {/* <TouchableOpacity
             style={styles.touchableLetsGo}
             onPress={() => {
               if (
@@ -1293,17 +1404,17 @@ class CategoriesDetails extends Component {
             >
               {i18n.t("proceed")}
             </Text>
-          </TouchableOpacity>
-        </View>
-        {this.state.displayDescription &&
+          </TouchableOpacity> */}
+        {/* </View> */}
+        {/* {this.state.displayDescription &&
         (this.state.sliderBanner ||
           this.state.bigBanner ||
           this.state.smallBanner) ? (
           <View style={{ flexDirection: "row", flex: 1 }}>
             <Grid>
+              <Row size={6} />
               <Col size={1} />
               <Col size={18}>
-                {/* {this.renderAllBannersDesign()} */}
                 {this.state.sliderBanner ||
                 this.state.bigBanner ||
                 this.state.smallBanner ? (
@@ -1370,7 +1481,7 @@ class CategoriesDetails extends Component {
                       </Row>
                     ) : null}
                     {/* <Row style={[{ height: this.state.equualHeight ? this.state.equualHeight : RF(11.6) }]}></Row> */}
-                    {this.state.bigBanner && this.state.bigBanner.length > 0 ? (
+                    {/* {this.state.bigBanner && this.state.bigBanner.length > 0 ? (
                       <Row>
                         <Grid>{this.renderBigAndSmallBanner()}</Grid>
                       </Row>
@@ -1381,7 +1492,29 @@ class CategoriesDetails extends Component {
               <Col size={1} />
             </Grid>
           </View>
+        ) : null} */}
+        
+        {this.state.selectedCompanyName ? (
+        <View>
+            <Text style={{
+                          fontFamily: "Quicksand-Regular",
+                          color: "#6b6b6b",
+                        }}>{this.state.selectedCompanyName}</Text>
+            <Text style={{
+                          fontFamily: "Quicksand-Regular",
+                          color: "#6b6b6b"
+                        }}>
+                </Text>
+                <Text style={{
+                          fontFamily: "Quicksand-Regular",
+                          color: "#6b6b6b"
+                        }}>
+                  {this.state.companyData.SelectedCompany.address}
+                </Text>
+                
+        </View>
         ) : null}
+
       </View>
     );
   }
@@ -2118,7 +2251,8 @@ class CategoriesDetails extends Component {
     AsyncStorage.multiSet([
       ["selectedCompany", JSON.stringify(data)],
       ["selectedCompanyName", JSON.stringify(value)],
-      ["price", value.price.toString()]
+      ["price", value.price.toString()],
+      ["address", JSON.stringify(data)]
     ]);
     this.setState({ selectedCompanyName: value.text });
     this.setState({ companyData: data });
