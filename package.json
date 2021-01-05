@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@types/htmlparser2": "^3.7.31",
-    "axios": "0.16.1",
+    "axios": "0.21.1",
     "babel-plugin-native-base-theme-require": "0.0.1",
     "buffer": "^5.2.1",
     "expo": "^33.0.0",
