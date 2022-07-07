@@ -52,7 +52,7 @@
     "expo-permissions": "~5.0.1",
     "exponent": "14.0.0",
     "i18next": "10.3.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "native-base": "^2.8.1",
     "npm-check-updates": "^2.15.0",
     "react": "16.8.3",
